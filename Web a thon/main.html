@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Finder</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2ce363;
+        }
+        .container {
+            text-align: center;
+        }
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body background="bg for aj_00001.png" wi>
+    <div class="container">
+        <h1 style="color: #fff ;  text-shadow: 2px 2px 4px rgba(0,0, 0,2);
+">Choose Stream</h1>
+        <select id="pageDropdown" onchange="navigateToPage()">
+            <option value="">Select a course...</option>
+            <option value="page1.html">Science</option>
+            <option value="page2.html">Commerce</option>
+            <option value="page3.html">Arts</option>
+            
+        </select>
+        <br>
+        <button onclick="redirectToCourse()">Go</button>
+    </div>
+
+    <script>
+             function navigateToPage() {
+            var dropdown = document.getElementById("pageDropdown");
+            var selectedValue = dropdown.value;
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        } 
+    </script>
+</body>
+</html>

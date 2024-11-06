@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaazha |</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/5cafb854f5.js"
+     crossorigin="anonymous"></script>
+</head>
+
+<body bgcolor="white">
+    <header>
+        <h2 class="Logo">Vaazha Academics</h2>
+        <nav class="Navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            
+
+
+        </nav>
+
+
+
+    </header>
+    <section class="parallax">
+       
+        <img src="bg.png" id="Bg">
+        <img src="green.png" id="green">
+        <img src="body.png" id="body">
+        <img src="books.png" id="books">
+        <img src="main.png" id="main">
+        <img src="right.png" id="right">
+        <img src="left.png" id="left">
+        <h2 id="text">Vaazha Academics</h2>
+
+    </section>
+    <script>
+        let body = document.getElementById('body');
+        let books = document.getElementById('books');
+        let right = document.getElementById('right');
+        let left = document.getElementById('left');
+        let text = document.getElementById('text');
+        
+        window.addEventListener('scroll', function(){
+          let value = window.scrollY;
+          left.style.left = value * -1.5 + 'px'
+          text.style.center = value * -2.5 + 'px'
+          right.style.left = value * 1.5 + 'px'
+          body.style.top = value* -1.25 + 'px'
+          books.style.top = value*-.15 + 'px'
+
+
+
+        })
+    </script>
+    <div>
+        
+
+
+        <div class="hero">
+            <h1>Who are we</h1>
+            <div class="social-links">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i><span data-text="Search"></span></a>
+                <a href=""><i class="fa-solid fa-calendar-days"></i><span data-text="Calendar"></span></a>
+                <a href=""><i class="fa-solid fa-chart-simple"></i><span data-text="Analytics"></span></a>
+                <a href=""><i class="fa-solid fa-list"></i><span data-text="List"></span></a>
+                <a href=""><i class="fa-solid fa-check"></i><span data-text="Check"></span></a>
+            </div>
+            
+            
+        </div>
+    </div>
+    <a href="main.html" class="big-text">Get Started!</a>
+</body>
+</html>
